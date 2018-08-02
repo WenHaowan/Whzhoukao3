@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="as.bwei.com.whzhoukao3.Activity.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#00f00f"
+        android:layout_weight="1"
+        >
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/ic_launcher"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="今日头条"
+            android:textSize="18sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"/>
+    </RelativeLayout>
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/Dl"
+        android:layout_width="match_parent"
+        android:layout_weight="9"
+        android:layout_height="0dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <android.support.design.widget.TabLayout
+                android:drawableTop="@drawable/home"
+                android:id="@+id/tab"
+                android:layout_width="match_parent"
+                app:tabTextColor="#00ff96"
+                app:tabSelectedTextColor="#ff0033"
+                app:tabBackground="@color/colorPrimaryDark"
+                android:layout_height="0dp"
+                android:layout_weight="1"></android.support.design.widget.TabLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="9"></android.support.v4.view.ViewPager>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start">
+            <TextView
+                android:background="#00f"
+                android:layout_width="350dp"
+                android:textSize="18sp"
+                android:layout_height="match_parent"
+                android:text="这是侧拉页面"/>
+        </LinearLayout>
+    </android.support.v4.widget.DrawerLayout>
+
+</LinearLayout>
